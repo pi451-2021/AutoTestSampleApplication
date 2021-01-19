@@ -113,7 +113,7 @@ ____
 
 ____
 
-###Run Project
+### Run Project
 
 On the command line:
 
@@ -147,7 +147,7 @@ ____
 
 ![Alt text](allure_screenshots/Ower/05_allure_duration.png?raw=true "Allure Duration")
 
-####Timeline
+#### Timeline
 
 ![Alt text](allure_screenshots/Ower/06_allure_timeline.png?raw=true "Allure Duration")
 
