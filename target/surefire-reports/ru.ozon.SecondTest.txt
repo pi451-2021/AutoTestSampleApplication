@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: ru.ozon.SecondTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 76.879 s <<< FAILURE! - in ru.ozon.SecondTest
+Test8_PriceRange(ru.ozon.SecondTest)  Time elapsed: 35.782 s  <<< FAILURE!
+java.lang.AssertionError: 
+Error: Timed out after 20 seconds waiting for presence of element located by: By.xpath: //*[@id="__ozon"]/div/div[1]/div[3]/div[2]/div[2]/div[3]/div[2]/div/div[2]/div[1]/input
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'DESKTOP-L3SR2VL', ip: '192.168.0.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:53365}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}), userDataDir=C:\Users\YGL\AppData\Local\Temp\scoped_dir18732_4429948}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=87.0.4280.141, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: b8aa04e242f50b05d462eec6e5a6b808
+	at ru.ozon.SecondTest.Test8_PriceRange(SecondTest.java:183)
+
