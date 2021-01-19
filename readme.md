@@ -128,28 +128,28 @@ ____
 
 #### Report
 
-![Alt text](allure_screenshots/Ower/01_allure_report.png?raw=true "Allure Report")
+![Alt text](allure_screenshots/Other/01_allure_report.png?raw=true "Allure Report")
 
 #### Suites
 
-![Alt text](allure_screenshots/Ower/02_allure_suites.png?raw=true "Allure Suites")
+![Alt text](allure_screenshots/Other/02_allure_suites.png?raw=true "Allure Suites")
 
 ##### Graphs
 1. Status
 
-![Alt text](allure_screenshots/Ower/01_allure_report.png?raw=true "Allure Status")
+![Alt text](allure_screenshots/Other/01_allure_report.png?raw=true "Allure Status")
 
 2. Severity
 
-![Alt text](allure_screenshots/Ower/04_allure_severity.png?raw=true "Allure Severity")
+![Alt text](allure_screenshots/Other/04_allure_severity.png?raw=true "Allure Severity")
 
 3. Duration
 
-![Alt text](allure_screenshots/Ower/05_allure_duration.png?raw=true "Allure Duration")
+![Alt text](allure_screenshots/Other/05_allure_duration.png?raw=true "Allure Duration")
 
 #### Timeline
 
-![Alt text](allure_screenshots/Ower/06_allure_timeline.png?raw=true "Allure Timeline")
+![Alt text](allure_screenshots/Other/06_allure_timeline.png?raw=true "Allure Timeline")
 
 ____
 
