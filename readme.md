@@ -23,7 +23,7 @@
 
 ____
 
-#Abstract
+# Abstract
 1. [Task 1](#task-1)
    1. [Test-plan](#test-plan)
 2. [Task 2](#task-2)
@@ -113,7 +113,7 @@ ____
 
 ____
 
-###Run Project
+### Run Project
 
 On the command line:
 
@@ -124,17 +124,17 @@ On the command line:
 ____
 
 
-###Allure Report
+### Allure Report
 
-####Report
+#### Report
 
 ![Alt text](allure_screenshots/Ower/01_allure_report.png?raw=true "Allure Report")
 
-####Suites
+#### Suites
 
 ![Alt text](allure_screenshots/Ower/02_allure_suites.png?raw=true "Allure Suites")
 
-#####Graphs
+##### Graphs
 1. Status
 
 ![Alt text](allure_screenshots/Ower/01_allure_report.png?raw=true "Allure Status")
@@ -147,14 +147,14 @@ ____
 
 ![Alt text](allure_screenshots/Ower/05_allure_duration.png?raw=true "Allure Duration")
 
-####Timeline
+#### Timeline
 
-![Alt text](allure_screenshots/Ower/06_allure_timeline.png?raw=true "Allure Duration")
+![Alt text](allure_screenshots/Ower/06_allure_timeline.png?raw=true "Allure Timeline")
 
 ____
 
 
-##Technologies
+## Technologies
 
 1. Programming language - [Java](https://www.java.com/)
 2. Browser control - [Selenium](https://www.selenium.dev/) / [Selenide](https://ru.selenide.org/)
@@ -165,7 +165,7 @@ ____
 
 ____
 
-##Documentation
+## Documentation
 
 1. [Java Code Conventions](http://www.magnumblog.space/other/131-translating-java-code-conventions)
 2. [Maven](https://proselyte.net/tutorials/maven/)
