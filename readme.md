@@ -149,7 +149,7 @@ ____
 
 #### Timeline
 
-![Alt text](allure_screenshots/Ower/06_allure_timeline.png?raw=true "Allure Duration")
+![Alt text](allure_screenshots/Ower/06_allure_timeline.png?raw=true "Allure Timeline")
 
 ____
 
