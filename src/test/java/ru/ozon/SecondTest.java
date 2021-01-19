@@ -174,11 +174,13 @@ public class SecondTest {
                 }
             }
             timeOut();
-            driver.navigate().back();
-            clickXpath(props.getProperty("xpInputPage"));
-            driver.getKeyboard().sendKeys("1");
-            driver.getKeyboard().pressKey(Keys.ENTER);
-            timeOut();
+            if (max > 1) {
+                driver.navigate().back();
+                clickXpath(props.getProperty("xpInputPage"));
+                driver.getKeyboard().sendKeys("1");
+                driver.getKeyboard().pressKey(Keys.ENTER);
+                timeOut();
+            }
         } catch (Exception ex) {
             fail("Error: " + ex.getMessage());
         }
