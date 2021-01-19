@@ -19,7 +19,7 @@
 [![MavenCompiler](https://img.shields.io/badge/mavencompiler-3.5.1-blue)](https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin/3.5.1)
 [![MavenSurefire](https://img.shields.io/badge/mavensurefire-2.22.2-blue)](https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin/2.22.2)
 [![Junit](https://img.shields.io/badge/junit-4.12-red)](https://mvnrepository.com/artifact/junit/junit/4.12)
-[![Allure](https://img.shields.io/badge/allure-2.10.0-blueviolet)]()
+[![Allure](https://img.shields.io/badge/allure-2.10.0-blueviolet)](https://bintray.com/qameta/maven/allure2/2.10.0)
 
 ____
 
