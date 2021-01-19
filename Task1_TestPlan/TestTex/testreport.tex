@@ -1,0 +1,419 @@
+\documentclass[bachelor, zaoch, test, times]{SCWorks}
+% параметр - тип обучения - одно из значений:
+%    spec     - специальность
+%    bachelor - бакалавриат (по умолчанию)
+%    master   - магистратура
+% параметр - форма обучения - одно из значений:
+%    och   - очное (по умолчанию)
+%    zaoch - заочное
+% параметр - тип работы - одно из значений:
+%    referat    - реферат
+%    coursework - курсовая работа (по умолчанию)
+%    diploma    - дипломная работа
+%    pract      - отчет по практике
+%    pract      - отчет о научно-исследовательской работе
+%    autoref    - автореферат выпускной работы
+%    assignment - задание на выпускную квалификационную работу
+%    review     - отзыв руководителя
+%    critique   - рецензия на выпускную работу
+% параметр - включение шрифта
+%    times    - включение шрифта Times New Roman (если установлен)
+%               по умолчанию выключен
+\usepackage[T2A]{fontenc}
+\usepackage[cp1251]{inputenc}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[sort,compress]{cite}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancyvrb}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage[english,russian]{babel}
+\usepackage{listings}
+\usepackage{upquote}
+\usepackage{color}
+\definecolor{bluekeywords}{rgb}{0.13,0.13,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.9,0,0}
+
+\usepackage[colorlinks=true]{hyperref}
+
+
+\newcommand{\eqdef}{\stackrel {\rm def}{=}}
+
+\newtheorem{lem}{Лемма}
+
+%Нумерация для листингов в зависимости от секции
+\newcounter{sectionlstNum}[section]
+\renewcommand{\thesectionlstNum}{\thesection .\arabic{sectionlstNum}.}
+\newcommand{\lst}{\par\refstepcounter{sectionlstNum} {\noindent{ Листинг \arabic{section}.\arabic{sectionlstNum}.} } }
+
+\begin{document}
+
+% Кафедра (в родительном падеже)
+\chair{математической кибернетики и компьютерных наук}
+
+% Тема работы
+\title{План тестирования (тест-план) для проекта Spring.PetClinic}
+
+% Курс
+\course{4}
+
+% Группа
+\group{451}
+
+% Факультет (в родительном падеже) (по умолчанию "факультета КНиИТ")
+%\department{факультета КНиИТ}
+
+% Специальность/направление код - наименование
+\napravlenie{09.03.04 "--- Программная инженерия}
+
+\studenttitle{Студентов}
+% Фамилия, имя, отчество в родительном падеже
+\author{Антоняна Гегама Арменовича \\
+Ламихова Юрия Борисовича \\
+Голикова Артема Олеговича \\
+Голикова Леонида Олеговича}
+
+
+%Научный руководитель (для реферата преподаватель проверяющий работу)
+\satitle{} %должность, степень, звание
+\saname{М.\,С.\, Семенов}
+
+% Семестр (только для практики, для остальных
+% типов работ не используется)
+\term{7}
+
+\courseName{Тестирование программного обеспечения}
+
+
+% Год выполнения отчета
+\date{2021}
+
+\maketitle
+
+% Включение нумерации рисунков, формул и таблиц по разделам
+% (по умолчанию - нумерация сквозная)
+% (допускается оба вида нумерации)
+%\secNumbering
+
+
+%\tableofcontents
+% Раздел "Обозначения и сокращения". Может отсутствовать в работе
+
+% Раздел "Определения". Может отсутствовать в работе
+%\definitions
+
+% Раздел "Определения, обозначения и сокращения". Может отсутствовать в работе.
+% Если присутствует, то заменяет собой разделы "Обозначения и сокращения" и "Определения"
+%\defabbrUse Cases
+
+
+% Раздел "Введение"
+
+
+\section{Общее описание продукта}
+
+PetClinic --- это демонстрационный проект, в котором представлено 
+обобщенное 
+использование Spring Boot, Spring MVC и Spring Data. PetClinic имеет 
+давнюю историю, восходящую к началу Spring Framework. Он зародился как 
+демонстрация почти всех возможностей, которые предоставлял Spring. В 
+наши дни это лишь небольшая часть всех его возможностей
+
+\textbf{Функциональные возможности:}
+
+\begin{itemize}
+\item Просмотр информации о ветеринарах и их специальностях
+\item Просмотр информации о владельцах питомцев
+\item Изменение информации о владельцах питомцев
+\item Добавление новых владельцев
+\item Просмотр информации о питомцах
+\item Изменение информации о питомцах
+\item Добавление новых питомцев
+\item Просмотр историй посещений питомцев
+\item Добавление записи о новых посещениях питомцев   
+\end{itemize}
+
+\section{Пользовательские сценарии и тест-кейсы}
+
+\begin{enumerate}
+\item Как клиент я хочу посмотреть список ветеринаров и их специальности, чтобы выбрать подходящего врача.\\
+\textbf{Тест-кейс №1}
+\begin{itemize}
+\item \textit{Название:} Отобразить список ветеринаров
+\item \textit{Начальные условия:} Пользователь находится на главной странице
+\item \textit{Шаги выполнения теста:}
+\begin{description}
+\item перейти в раздел «Veterenarians»
+\end{description}
+\item \textit{Описание ожидаемых результатов:} Отобразился список ветеринаров и их специальности
+\end{itemize}
+
+% 2 сценарий
+\item Как администратор я хочу просмотреть информацию, относящуюся к владельцу питомца, чтобы проверить его данные.\\
+\textbf{Тест-кейс №1}
+\begin{itemize}
+\item \textit{Название:} Владелец есть в системе
+\item \textit{Начальные условия:} Пользователь находится на главной странице
+\item \textit{Шаги выполнения теста:}
+\begin{description}
+\item a) перейти в раздел «Find Owners»
+\item б) ввести в поле «Last Name» фамилию «Franklin»
+\item в) нажать на кнопку «Find Owner»
+\end{description}
+\item \textit{Описание ожидаемых результатов:} Вывод информации о владельце 
+c именем «George Franklin»
+\end{itemize}
+
+\textbf{Тест-кейс №2}
+\begin{itemize}
+\item \textit{Название:} Владельца нет в системе
+\item \textit{Начальные условия:} Пользователь находится на главной странице
+\item \textit{Шаги выполнения теста:}
+\begin{description}
+\item a) перейти в раздел «Find Owners»
+\item б) ввести в поле «Last Name» фамилию «Jackson»
+\item в) нажать на кнопку «Find Owner»
+\end{description}
+\item \textit{Описание ожидаемых результатов:} Под полем «Last Name» появится сообщение «has not been found»
+\end{itemize}
+
+% 3 сценарий
+\item Как администратор я хочу обновить информацию о владельце домашнего животного, чтобы актуализировать ее.\\
+\textbf{Тест-кейс №1}
+\begin{itemize}
+\item \textit{Название:} Успешное обновление информации
+\item \textit{Начальные условия:} Пользователь находится на главной странице
+\item \textit{Шаги выполнения теста:}
+\begin{description}
+\item a) перейти в раздел «Find Owners»
+\item б) ввести в поле «Last Name» фамилию «Franklin»
+\item в) нажать на кнопку «Find Owner»
+\item г) нажать на кнопку «Edit Owner»
+\item д) изменить значение поля  «Telephone» на «123456789»
+\end{description}
+\item \textit{Описание ожидаемых результатов:} Переход на страницу с информацией о владельце. Телефон изменен.
+\end{itemize}
+
+\textbf{Тест-кейс №2}
+\begin{itemize}
+\item \textit{Название:} Успешное обновление информации
+\item \textit{Начальные условия:} Пользователь находится на главной странице
+\item \textit{Шаги выполнения теста:}
+\begin{description}
+\item a) перейти в раздел «Find Owners»
+\item б) ввести в поле «Last Name» фамилию «Franklin»
+\item в) нажать на кнопку «Find Owner»
+\item г) нажать на кнопку «Edit Owner»
+\item д) изменить значение поля  «Telephone» на «12345678910»
+\end{description}
+\item \textit{Описание ожидаемых результатов:} Система выдала сообщение «число вне допустимого диапазона (ожидалось <10 разрядов>.<0 разрядов>)».
+\end{itemize}
+
+% 4 сценарий
+\item Как администратор я хочу добавить нового владельца питомца в систему, чтобы получить возможность работы с его данными в системе.\\
+\textbf{Тест-кейс №1}
+\begin{itemize}
+\item \textit{Название:} Успешное добавление владельца
+\item \textit{Начальные условия:} Пользователь находится на главной странице
+\item \textit{Шаги выполнения теста:}
+\begin{description}
+\item a) перейти в раздел «Find Owners»
+\item б) нажать на кнопку «Add Owner»
+\item в) ввести в поля «First Name», «Last Name», «Address», «City», «Telephone» данные: «Peter»; «Parker»; «Forest Hills», «20 Inghram st.»; «New York»; «8976332112» соответственно.
+\item г) нажать кнопку «Add Owner»
+\end{description}
+\item \textit{Описание ожидаемых результатов:} Переход на страницу информации о новом владельце.
+\end{itemize}
+
+\textbf{Тест-кейс №2}
+\begin{itemize}
+\item \textit{Название:} Неуспешное добавление информации
+\item \textit{Начальные условия:} Пользователь находится на главной странице
+\item \textit{Шаги выполнения теста:}
+\begin{description}
+\item a) перейти в раздел «Find Owners»
+\item б) нажать на кнопку «Add Owner»
+\item в) ввести в поля «First Name», «Last Name», «Address», «Telephone» данные: «Peter»; «Parker»; «Forest Hills», «20 Inghram st.»;\\ «8976332112» соответственно.
+\item г) нажать кнопку «Add Owner»
+\end{description}
+\item \textit{Описание ожидаемых результатов:} Система выведет сообщение под полем «City» «не должно быть пустым».
+\end{itemize}
+
+% 5 
+\item Как администратор я хочу просмотреть информацию, относящуюся к домашнему животному, чтобы получить возможность работы с его данными в системе.\\
+\textbf{Тест-кейс №1}
+\begin{itemize}
+\item \textit{Название:} У владельца есть питомцы
+\item \textit{Начальные условия:} Пользователь находится на главной странице
+\item \textit{Шаги выполнения теста:}
+\begin{description}
+\item a) перейти в раздел «Find Owners»
+\item б) ввести в поле «Last Name» фамилию «Franklin»
+\item в) нажать на кнопку «Find Owner»
+\end{description}
+\item \textit{Описание ожидаемых результатов:} Вывод информации о питомцах в разделе «Pets and Visits»
+\end{itemize}
+
+\textbf{Тест-кейс №2}
+\begin{itemize}
+\item \textit{Название:} У владельца нет питомцев
+\item \textit{Начальные условия:} Пользователь находится на главной странице
+\item \textit{Шаги выполнения теста:}
+\begin{description}
+\item a) перейти в раздел «Find Owners»
+\item б) ввести в поле «Last Name» фамилию «Parker»
+\item в) нажать на кнопку «Find Owner»
+\end{description}
+\item \textit{Описание ожидаемых результатов:} в разделе «Pets and Visits» отсутствует информация о питомцах.
+\end{itemize}
+
+% 6 сценарий
+\item Как администратор я хочу обновить информацию о домашнем животном, чтобы изменить имя питомца.\\
+\textbf{Тест-кейс №1}
+\begin{itemize}
+\item \textit{Название:} Успешное обновление информации о питомце
+\item \textit{Начальные условия:} Пользователь находится на главной странице
+\item \textit{Шаги выполнения теста:}
+\begin{description}
+\item a) перейти в раздел «Find Owners»
+\item б) ввести в поле «Last Name» фамилию «Franklin»
+\item в) нажать на кнопку «Find Owner»
+\item г) нажать на кнопку «Edit Pet» напротив питомца с именем «Leo»
+\item д) в поле «Name» ввести «spider pig»
+\item e) нажать кнопку «Update Pet»
+\end{description}
+\item \textit{Описание ожидаемых результатов:} Переход на страницу с информацией о владельце питомца с именем «spider pig». 
+\end{itemize}
+
+\textbf{Тест-кейс №2}
+\begin{itemize}
+\item \textit{Название:} Неуспешное обновление информации о питомце
+\item \textit{Начальные условия:} Пользователь находится на главной странице
+\item \textit{Шаги выполнения теста:}
+\begin{description}
+\item a) перейти в раздел «Find Owners»
+\item б) ввести в поле «Last Name» фамилию «Franklin»
+\item в) нажать на кнопку «Find Owner»
+\item г) нажать на кнопку «Edit Pet» напротив питомца с именем «Leo»
+\item д) очистить поле «Name»
+\item e) нажать кнопку «Update Pet»
+\end{description}
+\item \textit{Описание ожидаемых результатов:} Система выводит сообщение «is required» под полем «Name». 
+\end{itemize}
+
+% 7 сценарий
+\item Как администратор я хочу добавить нового питомца в систему, чтобы получить возможность работать с его данными.\\
+\textbf{Тест-кейс №1}
+\begin{itemize}
+\item \textit{Название:} Успешное добавление питомца
+\item \textit{Начальные условия:} Пользователь находится на главной странице
+\item \textit{Шаги выполнения теста:}
+\begin{description}
+\item a) перейти в раздел «Find Owners»
+\item б) ввести в поле «Last Name» фамилию «Franklin»
+\item в) нажать на кнопку «Find Owner»
+\item г) нажать на кнопку «Add New Pet»
+\item д) ввести в поля «Name; «Birth Date»; данные «cat dog» ;«2020-01-01»; соответственно.
+\item e) в поле «Type» выбрать «bird»
+\item ж) нажать на кнопку «Add Pet»
+\end{description}
+\item \textit{Описание ожидаемых результатов:} Переход на страницу с информацией о владельце питомца. В разделе «Pets and Visits» добавлен питомец с именем «cat dog».
+\end{itemize}
+
+\textbf{Тест-кейс №2}
+\begin{itemize}
+\item \textit{Название:} Неуспешное добавление питомца
+\item \textit{Начальные условия:} Пользователь находится на главной странице
+\item \textit{Шаги выполнения теста:}
+\begin{description}
+\item a) перейти в раздел «Find Owners»
+\item б) ввести в поле «Last Name» фамилию «Franklin»
+\item в) нажать на кнопку «Find Owner»
+\item г) нажать на кнопку «Add New Pet»
+\item д) ввести в поля «Name; «Birth Date»; данные «cat dog» ;«Birth Date»; соответственно.
+\item e) в поле «Type» выбрать «bird»
+\item ж) нажать на кнопку «Add Pet»
+\end{description}
+\item \textit{Описание ожидаемых результатов:} Система выведет сообщение «введите данные в указанном формате«. Питомец не добавлен.
+\end{itemize}
+
+% 8 сценарий
+\item Как администратор я хочу просмотреть информацию, относящуюся к истории посещений питомца, чтобы сделать отчет.\\
+\textbf{Тест-кейс №1}
+\begin{itemize}
+\item \textit{Название:} Информация о предыдущих визитах присутствует
+\item \textit{Начальные условия:} Пользователь находится на главной странице
+\item \textit{Шаги выполнения теста:}
+\begin{description}
+\item a) перейти в раздел «Find Owners»
+\item б) ввести в поле «Last Name» фамилию «Coleman»
+\item в) нажать на кнопку «Find Owner»
+\item г) нажать на кнопку «Add visit» напротив питомца с именем «Max»
+\end{description}
+\item \textit{Описание ожидаемых результатов:} В разделе «Previous Visits» присутствуют записи о предыдущих посещениях.
+\end{itemize}
+
+\textbf{Тест-кейс №2}
+\begin{itemize}
+\item \textit{Название:} Информация о предыдущих визитах отсутствует
+\item \textit{Начальные условия:} Пользователь находится на главной странице
+\item \textit{Шаги выполнения теста:}
+\begin{description}
+\item a) перейти в раздел «Find Owners»
+\item б) ввести в поле «Last Name» фамилию «Franklin»
+\item в) нажать на кнопку «Find Owner»
+\item г) нажать на кнопку «Add visit» напротив питомца с именем «cat dog»
+\end{description}
+\item \textit{Описание ожидаемых результатов:} в разделе «Previous Visits» отсутствует  информация о предыдущих посещениях.
+\end{itemize}
+
+% 9 сценарий
+\item Как администратор я хочу добавить информацию о посещении в историю 
+посещений питомца, чтобы зафиксировать ее в системе.\\
+\textbf{Тест-кейс №1}
+	\begin{itemize}
+		\item \textit{Название:} Успешное добавление посещения
+		\item \textit{Начальные условия:} Пользователь находится на главной странице
+		\item \textit{Шаги выполнения теста:}
+			\begin{description}
+				\item a) перейти в раздел «Find Owners»
+				\item б) ввести в поле «Last name» фамилию «Franklin»
+				\item в) нажать на кнопку «Find Owner»
+				\item г) нажать на кнопку «Add Visit» у питомца «cat dog»
+				\item д) ввести в поля «Date», «Description» данные «2021-01-01», «broken leg»
+				\item е) нажать на кнопку «Add Visit»
+			\end{description}
+		\item \textit{Описание ожидаемых результатов:} Переход на страницу с информацией о пользователе. Добавлено новое посещение
+	\end{itemize}
+
+	\textbf{Тест-кейс №2}
+	\begin{itemize}
+		\item \textit{Название:} Неуспешное добавление посещения
+		\item \textit{Начальные условия:} Пользователь находится на главной странице
+		\item \textit{Шаги выполнения теста:}
+			\begin{description}
+				\item a) перейти в раздел «Find Owners»
+				\item б) ввести в поле «Last name» фамилию «Franklin»
+				\item в) нажать на кнопку «Find Owner»
+				\item г) нажать на кнопку «Add Visit» у питомца «cat dog»
+				\item д) ввести в поля «Date» данные «2021-01-01»
+				\item е) нажать на кнопку «Add Visit»
+			\end{description}
+		\item \textit{Описание ожидаемых результатов:} Система вывела сообщение «не должно быть пустым» под полем «Description».
+	\end{itemize}
+
+\end{enumerate}
+% Раздел "Заключение"
+%\conclusion
+
+
+
+\appendix
+
+
+
+\end{document}

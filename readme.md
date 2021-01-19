@@ -61,7 +61,7 @@ ____
     
 ### Test plan
 
- [Тест-план.pdf](Task1_TestPlan/TestPlanLamikhovYG.pdf)
+ [Тест-план.pdf](Task1_TestPlan/TestTex/testreport.pdf)
 
 ## Task 2
 Реализация автотестов для <a href="https://ozon.ru">ozon.ru</a>
@@ -80,6 +80,10 @@ ____
 
 ![Alt text](allure_screenshots/FirstTest/Test9_Basket.png?raw=true "Result for FirstTest")
 
+*Error for FirstTest*
+
+![Alt text](allure_screenshots/FirstTest/Error_FirstTest.png?raw=true "Result for FirstTest")
+
 ____
 
 ### Task 2.2
@@ -90,6 +94,10 @@ ____
 
 ![Alt text](allure_screenshots/SecondTest/Test_11_Basket_2.png?raw=true "Result for SecondTest")
 
+*Error for SecondTest*
+
+![Alt text](allure_screenshots/SecondTest/Error_SecondTest.png?raw=true "Result for SecondTest")
+
 ____
 
 ### Task 2.3
@@ -98,6 +106,10 @@ ____
 *Result for ThirdTest*
 
 ![Alt text](allure_screenshots/ThirdTest/Test8_Favorites_2.png?raw=true "Result for ThirdTest")
+
+*Error for ThirdTest*
+
+![Alt text](allure_screenshots/ThirdTest/Error_ThirdTest.png?raw=true "Result for ThirdTest")
 
 ____
 
