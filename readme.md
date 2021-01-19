@@ -61,7 +61,7 @@ ____
     
 ### Test plan
 
-[Тест-план.pdf](Task1_TestPlan/TestTex/testreport.pdf)
+[Тест-план.pdf](Task1_TestPlan/testreport.pdf)
 
 ## Task 2
 Реализация автотестов для <a href="https://ozon.ru">ozon.ru</a>
