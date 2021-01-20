@@ -137,7 +137,7 @@ ____
 ##### Graphs
 1. Status
 
-![Alt text](allure_screenshots/Other/01_allure_report.png?raw=true "Allure Status")
+![Alt text](allure_screenshots/Other/03_allure_status.png?raw=true "Allure Status")
 
 2. Severity
 
